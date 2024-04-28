@@ -1,0 +1,252 @@
+:root {
+  --color-purple: #a78ac9;
+  --color-pink: rgb(250, 132, 179);
+  --color-floor-border: #484848;
+  --color-dark: #1b1b1b;
+  --height-floor: 50px;
+}
+
+* {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+}
+
+body,
+.game-over-pop-up {
+  background: var(--color-purple);
+}
+
+.title {
+  color: var(--color-dark);
+  font-size: 30px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.title,
+.game-over-title,
+.play-again-button {
+  color: var(--color-dark);
+}
+
+.game-board,
+.game-over-pop-up,
+.play-again-button button {
+  border-radius: 20px;
+}
+
+/* GAME CONTAINER */
+
+.game-board {
+  border: 10px solid var(--color-floor-border);
+  position: relative;
+  height: 500px;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url(./images/background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.block {
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  margin-bottom: var(--height-floor);
+  animation: block-animation 1.8s infinite linear;
+}
+
+.cat {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 170px;
+  margin-bottom: var(--height-floor);
+  animation: none;
+}
+
+.red-bird {
+  position: absolute;
+  top: 10px;
+  width: 100px;
+  animation: red-bird-animation 15s infinite linear;
+}
+
+.white-bird {
+  position: absolute;
+  top: 50px;
+  width: 80px;
+  animation: white-bird-animation 25s infinite linear;
+}
+
+.floor {
+  background: var(--color-floor-border);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--height-floor);
+}
+
+.instructions {
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* GAME OVER */
+
+.hidden {
+  display: none;
+}
+
+.game-over-container {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.game-over-pop-up {
+  border: 3px solid var(--color-floor-border);
+  width: 30%;
+  height: 20%;
+  padding: 30px;
+}
+
+.game-over-title {
+  font-size: 25px;
+  text-align: center;
+}
+
+.play-again-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-again-button button {
+  font-size: 12px;
+  background-color: var(--color-pink);
+  padding: 10px 15px;
+  margin-top: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px #484848;
+  transition: translate 0.3s ease-in-out;
+}
+
+.play-again-button button:active {
+  box-shadow: 0 5px var(--color-dark);
+  transform: translateY(4px);
+}
+
+.play-again-button button:hover {
+  background-color: rgb(247, 163, 196);
+}
+
+/* ANIMATIONS */
+
+.jump {
+  animation: jump 900ms ease-out;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 130px;
+  }
+
+  50% {
+    bottom: 130px;
+  }
+
+  60% {
+    bottom: 130px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes block-animation {
+  0% {
+    right: -80px;
+  }
+
+  /* delay entre o loop da animação*/
+  30% {
+    right: -80px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes ghost-animation {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    /* delay entre o loop da animação*/
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes red-bird-animation {
+  0% {
+    right: -80px;
+  }
+
+  50% {
+    /* delay entre o loop da animação*/
+    right: -80px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes white-bird-animation {
+  0% {
+    right: -80px;
+  }
+
+  /* delay entre o loop da animação*/
+  80% {
+    right: -80px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes image-fade-out {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

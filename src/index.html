@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <title>Pulo do Gato</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="title">PULO DO GATO</div>
+
+    <div class="game-board">
+
+        <div class="game-over-container">
+            <div class="game-over-pop-up hidden">
+                
+                <p class="game-over-title">GAME OVER</p>
+                
+                <div class="play-again-button">
+                    <button type="button" onClick="window.location.reload();">Jogar de novo</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="floor">
+            <p class="instructions">Pressione qualquer tecla para pular</p>
+        </div>
+        <img src="./images/bird-red.gif" class="red-bird">
+        <img src="./images/bird-white.gif" class="white-bird">
+        <img src="./images/block.png" class="block">
+        <img src="./images/cat.gif" class="cat">
+         
+    </div>
+    
+    <script src="script.js" defer></script>
+
+</body>
+</html>
