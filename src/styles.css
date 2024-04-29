@@ -64,6 +64,7 @@ body,
   width: 170px;
   margin-bottom: var(--height-floor);
   animation: none;
+  opacity: 1;
 }
 
 .red-bird {
@@ -188,7 +189,8 @@ body,
   }
 }
 
-@keyframes ghost-animation {
+
+@keyframes ghost-floating-animation {
   0% {
     bottom: 0;
   }
@@ -230,23 +232,5 @@ body,
 
   100% {
     right: 100%;
-  }
-}
-
-@keyframes image-fade-out {
-  0% {
-    opacity: 1;
-  }
-  17% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
-  92% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
