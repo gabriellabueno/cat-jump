@@ -1,9 +1,9 @@
 :root {
   --color-purple: #a78ac9;
   --color-pink: rgb(250, 132, 179);
-  --color-floor-border: #484848;
+  --color-grey: #484848;
   --color-dark: #1b1b1b;
-  --height-floor: 50px;
+  --height-floor: 3.125rem;
 }
 
 * {
@@ -18,9 +18,9 @@ body,
 
 .title {
   color: var(--color-dark);
-  font-size: 30px;
+  font-size: 2.5rem;
   text-align: center;
-  margin: 30px 0;
+  margin: 1.5625rem;
 }
 
 .title,
@@ -32,15 +32,15 @@ body,
 .game-board,
 .game-over-pop-up,
 .play-again-button button {
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 /* GAME CONTAINER */
 
 .game-board {
-  border: 10px solid var(--color-floor-border);
+  border: 0.625rem solid var(--color-grey);
   position: relative;
-  height: 500px;
+  height: 31.25rem;
   width: 70%;
   margin: 0 auto;
   overflow: hidden;
@@ -52,7 +52,7 @@ body,
 .block {
   position: absolute;
   bottom: 0;
-  width: 70px;
+  width: 4.375rem;
   margin-bottom: var(--height-floor);
   animation: block-animation 1.8s infinite linear;
 }
@@ -60,8 +60,8 @@ body,
 .cat {
   position: absolute;
   bottom: 0;
-  left: 80px;
-  width: 170px;
+  left: 5rem;
+  width: 10.625rem;
   margin-bottom: var(--height-floor);
   animation: none;
   opacity: 1;
@@ -69,20 +69,20 @@ body,
 
 .red-bird {
   position: absolute;
-  top: 10px;
-  width: 100px;
+  top: 0.625rem;
+  width: 6.25rem;
   animation: red-bird-animation 15s infinite linear;
 }
 
 .white-bird {
   position: absolute;
-  top: 50px;
-  width: 80px;
+  top: 3.125rem;
+  width: 5rem;
   animation: white-bird-animation 25s infinite linear;
 }
 
 .floor {
-  background: var(--color-floor-border);
+  background: var(--color-grey);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -91,9 +91,9 @@ body,
 
 .instructions {
   color: #fff;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /* GAME OVER */
@@ -103,22 +103,29 @@ body,
 }
 
 .game-over-container {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
 
 .game-over-pop-up {
-  border: 3px solid var(--color-floor-border);
-  width: 30%;
-  height: 20%;
-  padding: 30px;
+  border: 0.1875rem solid var(--color-grey);
+  width: auto;
+  height: auto;
+  padding: 1.875rem;
 }
 
 .game-over-title {
-  font-size: 25px;
+  font-size: 1.5625rem;
   text-align: center;
+}
+
+#score {
+  color: var(--color-grey);
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 0.625rem;
 }
 
 .play-again-button {
@@ -128,18 +135,18 @@ body,
 }
 
 .play-again-button button {
-  font-size: 12px;
+  font-size: 0.75rem;
   background-color: var(--color-pink);
-  padding: 10px 15px;
-  margin-top: 30px;
+  margin-top: 1.25rem;
+  padding: 0.625rem 0.9375rem;
   cursor: pointer;
-  box-shadow: 0 8px #484848;
+  box-shadow: 0 0.5rem #484848;
   transition: translate 0.3s ease-in-out;
 }
 
 .play-again-button button:active {
-  box-shadow: 0 5px var(--color-dark);
-  transform: translateY(4px);
+  box-shadow: 0 0.3125rem var(--color-dark);
+  transform: translateY(0.25rem);
 }
 
 .play-again-button button:hover {
@@ -158,15 +165,15 @@ body,
   }
 
   40% {
-    bottom: 130px;
+    bottom: 8.125rem;
   }
 
   50% {
-    bottom: 130px;
+    bottom: 8.125rem;
   }
 
   60% {
-    bottom: 130px;
+    bottom: 8.125rem;
   }
 
   100% {
@@ -176,19 +183,18 @@ body,
 
 @keyframes block-animation {
   0% {
-    right: -80px;
+    right: -5rem;
   }
 
   /* delay entre o loop da animação*/
   30% {
-    right: -80px;
+    right: -5rem;
   }
 
   100% {
     right: 100%;
   }
 }
-
 
 @keyframes ghost-floating-animation {
   0% {
@@ -197,7 +203,7 @@ body,
 
   50% {
     /* delay entre o loop da animação*/
-    bottom: 20px;
+    bottom: 1rem;
   }
 
   100% {
@@ -207,12 +213,12 @@ body,
 
 @keyframes red-bird-animation {
   0% {
-    right: -80px;
+    right: -5rem;
   }
 
   50% {
     /* delay entre o loop da animação*/
-    right: -80px;
+    right: -5rem;
   }
 
   100% {
@@ -222,15 +228,44 @@ body,
 
 @keyframes white-bird-animation {
   0% {
-    right: -80px;
+    right: -5rem;
   }
 
   /* delay entre o loop da animação*/
   80% {
-    right: -80px;
+    right: -5rem;
   }
 
   100% {
     right: 100%;
   }
+}
+
+/* CREDITS */
+
+.credits * {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0.5rem;
+}
+
+.credits p {
+  color: var(--color-dark);
+  font-size: 0.625rem;
+  opacity: 0.7;
+  margin: 0.625rem;
+  white-space: pre-line;
+  text-align: right;
+}
+
+.github-logo {
+  opacity: 0.6;
+  width: 3.125rem;
+  margin-bottom: 2rem;
+}
+
+.github-logo:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }

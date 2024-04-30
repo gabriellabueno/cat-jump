@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     
-    <title>Pulo do Gato</title>
+    <title>Cat Jump</title>
     <link rel="icon" type="image/x-icon" href="./favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <div class="title">PULO DO GATO</div>
+    <div class="title">CAT JUMP</div>
 
     <div class="game-board">
 
@@ -24,16 +24,17 @@
             <div class="game-over-pop-up hidden">
                 
                 <p class="game-over-title">GAME OVER</p>
+                <p id="score">0</p>
                 
                 <div class="play-again-button">
-                    <button type="button" onClick="window.location.reload();">Jogar de novo</button>
+                    <button type="button" onClick="window.location.reload();">Play again</button>
                 </div>
                 
             </div>
         </div>
 
         <div class="floor">
-            <p class="instructions">Pressione qualquer tecla para pular</p>
+            <p class="instructions">Press &ltSpace&gt to jump</p>
         </div>
         <img src="./images/bird-red.gif" class="red-bird">
         <img src="./images/bird-white.gif" class="white-bird">
@@ -42,6 +43,14 @@
          
     </div>
     
+    <div class="credits">
+        <a href="https://github.com/gabriellabueno/cat-jump">
+            <img src="./images/github-logo.png" alt="GitHub logo" title = "GitHub Repository" class="github-logo">
+        </a> 
+        <p>Made by 
+            Gabriella Bueno</p>
+    </div>
+
     <script src="script.js" defer></script>
 
 </body>
